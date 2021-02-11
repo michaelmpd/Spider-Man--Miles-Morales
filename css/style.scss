@@ -13,7 +13,7 @@ body {
   height: 100vh;
 
   font-family: 'Mukta', sans-serif;
-  background-color: #1a1a1a;
+  background-color: $blue-dark;
 }
 
 img, svg {
@@ -40,3 +40,5 @@ p {
 @import "partials/_layout";
 @import "partials/_menu";
 @import "partials/_animations";
+@import "partials/_spacing";
+

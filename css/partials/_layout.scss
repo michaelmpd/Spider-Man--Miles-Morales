@@ -14,6 +14,18 @@
     align-items: flex-start;
 }
 
+.flex{
+    display: flex;
+}
+
+.w-auto{
+    width: auto;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
 .spiderman{
     width: 150%;
     transform: translate3d(-170px,0,0);
