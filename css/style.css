@@ -68,6 +68,10 @@ p {
           transform: translate3d(-170px, 0, 0);
 }
 
+.btns {
+  margin: 12px 0;
+}
+
 .btn {
   display: inline-block;
   padding: 12px 32px;
@@ -145,11 +149,12 @@ p {
   content: '';
   display: block;
   position: absolute;
-  top: -1px;
-  left: -1px;
+  top: 0px;
+  left: -2px;
   z-index: -1;
+  border-radius: 3px;
   width: 0%;
-  height: 103%;
+  height: 100%;
   -webkit-transition: .7s ease;
   transition: .7s ease;
   background: linear-gradient(267.72deg, #F02A2F 0.88%, #EA1D22 100%);
@@ -205,6 +210,15 @@ header {
   margin-left: 16px;
 }
 
+.logo svg path {
+  -webkit-transition: .7s ease;
+  transition: .7s ease;
+}
+
+.logo svg:hover path {
+  fill: #ea1d22;
+}
+
 .nav-link {
   display: inline-block;
   font-size: 14px;
@@ -252,23 +266,23 @@ header {
           align-items: center;
 }
 
-.nav-social svg, .nav-social img {
+.nav-social svg {
   margin-right: 16px;
   width: 24px;
   cursor: pointer;
 }
 
-.nav-social svg path, .nav-social svg circle, .nav-social img path, .nav-social img circle {
+.nav-social svg path, .nav-social svg circle {
   -webkit-transition: .7s ease;
   transition: .7s ease;
 }
 
-.nav-social svg, .nav-social img:hover {
+.nav-social svg:hover {
   -webkit-transform: translate3d(0, -2px, 0);
           transform: translate3d(0, -2px, 0);
 }
 
-.nav-social svg path, .nav-social svg circle, .nav-social img:hover path, .nav-social img:hover circle {
+.nav-social svg:hover path, .nav-social svg:hover circle {
   fill: red;
 }
 /*# sourceMappingURL=style.css.map */
