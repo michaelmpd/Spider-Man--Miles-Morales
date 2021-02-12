@@ -45,7 +45,19 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: hidden;
+  overflow: none;
+  height: 85vh;
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    overflow: hidden;
+  }
 }
 
 .container-item-1 {
@@ -79,9 +91,17 @@ p {
 }
 
 .spiderman {
-  width: 150%;
+  width: 140%;
   -webkit-transform: translate3d(-170px, 0, 0);
           transform: translate3d(-170px, 0, 0);
+}
+
+@media screen and (max-width: 960px) {
+  .spiderman {
+    width: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
 }
 
 .btns {
@@ -180,6 +200,56 @@ p {
   width: 102%;
 }
 
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg-video::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  background: linear-gradient(110deg, #0a0c10 25%, rgba(11, 12, 16, 0.8) 50%, #0a0c10 70%);
+}
+
+.bg-loader {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background: linear-gradient(225deg, #ea1d22 0%, #b31317 100%);
+}
+
 header {
   width: 100%;
   padding-top: 16px;
@@ -220,6 +290,12 @@ header {
 
 .nav-list li {
   margin-left: 24px;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-list {
+    display: none;
+  }
 }
 
 .logo {
@@ -270,6 +346,20 @@ header {
   height: 40px;
 }
 
+.bx {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .bx {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-color: #f4f7fb;
+    border-radius: 8px;
+  }
+}
+
 .nav-social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -280,6 +370,12 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-social {
+    display: none;
+  }
 }
 
 .nav-social svg {
@@ -302,6 +398,85 @@ header {
   fill: red;
 }
 
+.logo-spiderman {
+  fill: transparent;
+  -webkit-transition: .7s ease;
+  transition: .7s ease;
+  -webkit-animation: logo-spiderman 12s ease infinite alternate;
+          animation: logo-spiderman 12s ease infinite alternate;
+}
+
+/*
+.logo{
+    transition: .3s ease;
+    transform-origin: center center;
+    transform-box: fill-box;
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+*/
+@-webkit-keyframes logo-spiderman {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 1;
+    stroke-dasharray: 100 0;
+    fill: transparent;
+  }
+  60%, 100% {
+    stroke-width: 0;
+    fill: #e5e9ef;
+  }
+}
+@keyframes logo-spiderman {
+  0% {
+    stroke-width: 0;
+    stroke-dasharray: 1 100;
+    fill: transparent;
+  }
+  25% {
+    stroke-width: 1;
+    stroke-dasharray: 100 0;
+    fill: transparent;
+  }
+  60%, 100% {
+    stroke-width: 0;
+    fill: #e5e9ef;
+  }
+}
+
+/*
+.line1{
+    animation: line 7s ease infinite alternate;
+}
+
+.line2{
+    animation: line 4s ease .7s infinite alternate;
+}
+
+.line3{
+    animation: line 6s ease 2s infinite alternate;
+}
+
+.line4{
+    animation: line 5s ease infinite alternate;
+}
+
+@keyframes line{
+    0%{
+        stroke-dasharray: 200 50;
+        stroke-dashoffset: 0;
+    }
+    100%{
+        stroke-dasharray: 500 5;
+        stroke-dashoffset: 1000;
+    }
+}
+*/
 .s-0 {
   margin: 0;
   padding: 0;

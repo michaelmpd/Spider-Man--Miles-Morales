@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+@mixin responsive() {
+  @media screen and (max-width:960px) {
+      @content
+  }
+}
+
 @import "partials/_colors";
 
 body {
